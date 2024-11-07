@@ -1,0 +1,48 @@
+<!-- partial:index.partial.html -->
+<header>
+  <div aria-busy="true" id="progress" hidden aria-label="Loading, please wait." role="progressbar">
+  </div>
+</header>
+<main role="main"
+  class="h-full w-full flex flex-col lg:items-center justify-start py-60 lg:py-0 lg:justify-center lg:w-[600px]">
+  <div
+    class="fixed inset-0 h-full w-full bg-[radial-gradient(#d1d1d1_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_60%,transparent_100%)] -z-10"
+    id="dot_pattern">
+  </div>
+  <i class="fa-solid fa-globe fa-3x text-white"></i>
+  <h1 class="text-white text-8xl lg:text-5xl font-semibold">Website Downloader</h1>
+  <p class="text-white text-3xl lg:text-xl">Download all the Source Code and Assets of any Website </p>
+  <div class="w-full">
+    <div class="row">
+      <div class="col-lg-12" style="float: none; margin: 0 auto;">
+        <div id="custom-search-input">
+          <form method="get" class="form pt-14 lg:pt-0" action="/search">
+            <div class="flex flex-col lg:flex-row gap-2 col-md-12 items-center justify-center">
+              <input type="text"
+                class="form-control input-lg bg-zinc-900 text-white h-20 p-5 lg:px-5 lg:py-4 w-full rounded-3xl border border-zinc-600 placeholder:text-white placeholder:font-medium outline-none focus:border-zinc-400 text-xl"
+                autocomplete="off" id="website" placeholder="Enter webpage url" />
+              <button class="lg:h-14 lg:w-14 h-20 w-20" id="download" type="button">
+                <i
+                  class="fa-sharp fa-solid fa-circle-arrow-right fa-2xl hidden lg:block text-zinc-400 hover:brightness-90"></i>
+                <i
+                  class="fa-sharp fa-solid fa-circle-arrow-right fa-4x block lg:hidden text-zinc-400 hover:brightness-90"></i>
+              </button>
+          </form>
+
+        </div><br>
+
+      </div>
+      <br>
+    </div>
+  </div>
+  <h5 hidden id='nFilesP' class="text-white font-semibold text-4xl lg:text-xl">Total Downloaded Files: <span id='nFiles'
+      style="color: red;font-weight: bold" class="font-semibold text-4xl lg:text-xl">10</span></h5>
+  <p class="log text-white text-4xl lg:text-xl" id='log'></p>
+  <div class="pt-10 lg:pt-5">
+    <button style="display: none"
+      class="btn btn-success py-4 px-6 rounded-3xl bg-green-400 text-3xl lg:text-lg text-black font-semibold">Download
+      Website
+      Assets</button>
+  </div>
+  </div>
+</main>
